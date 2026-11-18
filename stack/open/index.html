@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/assets/site.css"><link rel="icon" href="/assets/favicon.svg"><title>Open in Stack</title><meta name="robots" content="noindex">
+</head><body><header class="site"><div class="wrap"><a class="mark" href="/"><span class="dot"></span>Orange Strategy</a><nav><a href="/stack/">Stack</a></nav></div></header>
+<main class="wrap doc"><h1>Open in Stack</h1>
+<p>This link is for Stack: Golf Side Games on iPhone. Tap the button to open it in Stack.</p>
+<p><a id="open" class="button" href="/stack/">Open in Stack</a></p>
+<p class="meta">Don't have Stack? See <a href="/stack/">Stack</a>. What's in this link (a round or a course) stays in the link: this page passes it to Stack and doesn't send or keep it.</p>
+</main>
+<script>
+// Follow along (D-308): everything after "#" stays on this phone (browsers never send it to the website).
+(function () {
+  var h = location.hash.slice(1);
+  if (!/^k=(follow|ask|course)&d=[A-Za-z0-9_\-]{1,300000}$/.test(h)) return;
+  var url = "stackgolf://share?" + h;
+  document.getElementById("open").setAttribute("href", url);
+  location.href = url;
+})();
+</script>
+</body></html>
